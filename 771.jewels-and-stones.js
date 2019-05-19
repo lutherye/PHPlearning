@@ -12,7 +12,7 @@ var numJewelsInStones = function(J, S) {
     let num = 0;
     let hash = {};
     for (let i = 0; i < J.length; i++) {
-        let ele = J[i]
+        let ele = J[i];
         hash[ele] = true;
     }
     for (let i = 0; i < S.length; i++) {
