@@ -11,8 +11,8 @@ var sortArrayByParityII = function (A) {
     let odd = 1;
     let even = 0;
     while ((odd < A.length - 1) || (even < A.length)) {
-        let oddHolder = undefined;
-        let evenHolder = undefined;
+        let oddHolder;
+        let evenHolder;
         if (A[odd] % 2 === 0) {
             oddHolder = A[odd];
         } else {
