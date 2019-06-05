@@ -7,19 +7,25 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var moveZeroes = function(nums) {
+var moveZeroes = function (nums) {
     if (!nums.length) return null;
     let idx = 0;
-    while (idx < nums.length ) {
+    let count = 0;
+    while (idx < nums.length) {
         let num = nums[idx];
-        if (num === 0 && idx === 0) {
+        if (num === 0) {
             nums.splice(idx, 1);
-            nums.push(0);
+            count++;
         } else {
-            idx ++;
+            idx++;
         }
+    }
+    while (count > 0) {
+        nums.push(0);
+        count--;
     }
 
     return nums;
 };
+
 
