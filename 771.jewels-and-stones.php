@@ -14,7 +14,7 @@ class Solution {
         $counter = 0;
         for($i = 0; $i < strlen($S); $i++) {
             if(strpos($J, $S[$i]) !== false) {
-                $counter++;
+                $counter+=1;
             }
         }
         return $counter;
